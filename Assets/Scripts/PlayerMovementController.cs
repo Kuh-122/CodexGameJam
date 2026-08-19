@@ -94,17 +94,20 @@ public class PlayerMovementController : MonoBehaviour
     private void HandleLook()
     {
         var lookInput = lookAction.ReadValue<Vector2>();
-        if (lookInput.sqrMagnitude <= 0.0001f || playerCamera == null)
+        if (playerCamera == null)
         {
             return;
         }
 
-        yaw += lookInput.x * lookSensitivity;
-        pitch -= lookInput.y * lookSensitivity;
-        pitch = Mathf.Clamp(pitch, -pitchLimit, pitchLimit);
+        if (lookInput.sqrMagnitude > 0.0001f)
+        {
+            yaw += lookInput.x * lookSensitivity;
+            pitch -= lookInput.y * lookSensitivity;
+            pitch = Mathf.Clamp(pitch, -pitchLimit, pitchLimit);
 
-        transform.rotation = Quaternion.Euler(0f, yaw, 0f);
-        playerCamera.localRotation = Quaternion.Euler(pitch, 0f, 0f);
+            transform.rotation = Quaternion.Euler(0f, yaw, 0f);
+            playerCamera.localRotation = Quaternion.Euler(pitch, 0f, 0f);
+        }
     }
 
     private void HandleMovement()

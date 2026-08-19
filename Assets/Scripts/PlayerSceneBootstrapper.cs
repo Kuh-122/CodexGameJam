@@ -5,8 +5,10 @@ public static class PlayerSceneBootstrapper
     [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
     private static void CreatePlayerInScene()
     {
-        if (GameObject.Find("Player") != null)
+        GameObject existingPlayer = GameObject.Find("Player");
+        if (existingPlayer != null)
         {
+            EnsurePlayerWeaponHandler(existingPlayer);
             return;
         }
 
@@ -35,5 +37,14 @@ public static class PlayerSceneBootstrapper
 
         var movement = player.AddComponent<PlayerMovementController>();
         movement.SetCameraTransform(cameraObject.transform);
+        EnsurePlayerWeaponHandler(player);
+    }
+
+    private static void EnsurePlayerWeaponHandler(GameObject player)
+    {
+        if (player.GetComponent<PlayerWeaponHandler>() == null)
+        {
+            player.AddComponent<PlayerWeaponHandler>();
+        }
     }
 }

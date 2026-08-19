@@ -24,7 +24,7 @@
                     "initialStateCheck": true
                 },
                 {
-                    "name": "Attack",
+                    "name": "FireLeft",
                     "type": "Button",
                     "id": "6c2ab1b8-8984-453a-af3d-a3c78ae1679a",
                     "expectedControlType": "Button",
@@ -81,6 +81,24 @@
                     "name": "Sprint",
                     "type": "Button",
                     "id": "641cd816-40e6-41b4-8c3d-04687c349290",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "FireRight",
+                    "type": "Button",
+                    "id": "f0a3c0a7-70dd-46ed-9e54-e9f4b1ecf4cc",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Reload",
+                    "type": "Button",
+                    "id": "4b3e4b8a-4d1e-4d6f-b2e8-5b7b7db479b0",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -260,7 +278,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": ";Gamepad",
-                    "action": "Attack",
+                    "action": "FireLeft",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -271,7 +289,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": ";Keyboard&Mouse",
-                    "action": "Attack",
+                    "action": "FireLeft",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -282,7 +300,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": ";Touch",
-                    "action": "Attack",
+                    "action": "FireLeft",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -293,7 +311,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Joystick",
-                    "action": "Attack",
+                    "action": "FireLeft",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -304,7 +322,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "XR",
-                    "action": "Attack",
+                    "action": "FireLeft",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -315,7 +333,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard&Mouse",
-                    "action": "Attack",
+                    "action": "FireLeft",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -470,6 +488,28 @@
                     "processors": "",
                     "groups": "Keyboard&Mouse",
                     "action": "Crouch",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a3a1a46f-6e3e-4ab6-bfca-8b7f2c1b7220",
+                    "path": "<Mouse>/rightButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "FireRight",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "b1c95b6d-e5b5-46a1-95d8-1a78efc2ed51",
+                    "path": "<Keyboard>/r",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "Reload",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
