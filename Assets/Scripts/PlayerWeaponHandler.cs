@@ -28,17 +28,17 @@ public class PlayerWeaponHandler : MonoBehaviour
             return;
         }
 
-        if (fireLeftAction.IsPressed() && leftWeapon != null)
+        if (leftWeapon != null)
         {
-            if (leftWeapon.FireMode == WeaponFireMode.Automatic || fireLeftAction.WasPressedThisFrame())
+            if (fireLeftAction.WasPressedThisFrame())
             {
                 leftWeapon.TryFire();
             }
         }
 
-        if (fireRightAction.IsPressed() && rightWeapon != null)
+        if (rightWeapon != null)
         {
-            if (rightWeapon.FireMode == WeaponFireMode.Automatic || fireRightAction.WasPressedThisFrame())
+            if (fireRightAction.WasPressedThisFrame())
             {
                 rightWeapon.TryFire();
             }

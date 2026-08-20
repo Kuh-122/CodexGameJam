@@ -1,0 +1,118 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &9139963573102537897
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 964e1fe89a17a6a41bafffd21a0531ab, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 964e1fe89a17a6a41bafffd21a0531ab, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 964e1fe89a17a6a41bafffd21a0531ab, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 964e1fe89a17a6a41bafffd21a0531ab, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 964e1fe89a17a6a41bafffd21a0531ab, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 964e1fe89a17a6a41bafffd21a0531ab, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 964e1fe89a17a6a41bafffd21a0531ab, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 964e1fe89a17a6a41bafffd21a0531ab, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 964e1fe89a17a6a41bafffd21a0531ab, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 964e1fe89a17a6a41bafffd21a0531ab, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 964e1fe89a17a6a41bafffd21a0531ab, type: 3}
+      propertyPath: m_Name
+      value: Shotgun
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 964e1fe89a17a6a41bafffd21a0531ab, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4437591690336301517}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 964e1fe89a17a6a41bafffd21a0531ab, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4437591690336301518}
+  m_SourcePrefab: {fileID: 100100000, guid: 964e1fe89a17a6a41bafffd21a0531ab, type: 3}
+--- !u!1 &8220975462252564984 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 964e1fe89a17a6a41bafffd21a0531ab, type: 3}
+  m_PrefabInstance: {fileID: 9139963573102537897}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &4437591690336301517
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8220975462252564984}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a273192417806224cb06f50f96a9b3ca, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &4437591690336301518
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8220975462252564984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96bc79c75fcf18848a1c507a7779dec3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weaponType: 1
+  damage: 2
+  fireRate: 0.4
+  reloadDuration: 1.5
+  magazineSize: 6
+  reserveAmmo: 24
+  fireDistance: 100
+  shotgunPelletCount: 10
+  shotgunSpreadAngle: 6
+  playerCamera: {fileID: 0}
+  muzzle: {fileID: 0}
+  animator: {fileID: 4437591690336301517}
+  fireTrigger: Fire
+  reloadTrigger: Reload
