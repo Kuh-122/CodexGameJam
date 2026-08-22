@@ -15,6 +15,9 @@ public class PlayerWeaponHandler : MonoBehaviour
     private InputAction fireRightAction;
     private InputAction reloadAction;
 
+    public Weapon LeftWeapon => leftWeapon;
+    public Weapon RightWeapon => rightWeapon;
+
     private void Awake()
     {
         FindMissingReferences();

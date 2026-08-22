@@ -9,6 +9,8 @@ public static class PlayerSceneBootstrapper
         if (existingPlayer != null)
         {
             EnsurePlayerWeaponHandler(existingPlayer);
+            EnsurePlayerHPManager(existingPlayer);
+            EnsureAmmoDisplay(existingPlayer);
             return;
         }
 
@@ -38,6 +40,8 @@ public static class PlayerSceneBootstrapper
         var movement = player.AddComponent<PlayerMovementController>();
         movement.SetCameraTransform(cameraObject.transform);
         EnsurePlayerWeaponHandler(player);
+        EnsurePlayerHPManager(player);
+        EnsureAmmoDisplay(player);
     }
 
     private static void EnsurePlayerWeaponHandler(GameObject player)
@@ -45,6 +49,22 @@ public static class PlayerSceneBootstrapper
         if (player.GetComponent<PlayerWeaponHandler>() == null)
         {
             player.AddComponent<PlayerWeaponHandler>();
+        }
+    }
+
+    private static void EnsureAmmoDisplay(GameObject player)
+    {
+        if (Object.FindFirstObjectByType<AmmoDisplayUI>() == null)
+        {
+            player.AddComponent<AmmoDisplayUI>();
+        }
+    }
+
+    private static void EnsurePlayerHPManager(GameObject player)
+    {
+        if (player.GetComponent<PlayerHPManager>() == null)
+        {
+            player.AddComponent<PlayerHPManager>();
         }
     }
 }
